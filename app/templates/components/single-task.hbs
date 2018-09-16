@@ -1,0 +1,9 @@
+<div class="checkbox">
+    <label>
+        <span {{action 'toggleStatus' }}class="input-group-addon beautiful"><span class="fa {{if (eq task.status 'incomplete') 'fa-circle-o' 'fa-check-circle-o'}}"></span>
+        <input checked="" type="checkbox">
+        </span>
+        {{task.title}}
+    </label>
+    {{!-- <button class="btn btn-danger btn-sm pull-right" {{action 'destroy'}} >{{fa-icon "trash"}}</button> --}}
+</div>

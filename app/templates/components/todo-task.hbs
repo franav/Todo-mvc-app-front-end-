@@ -1,0 +1,38 @@
+
+<div class="flash-messages">
+    {{#each flashMessages.queue as |flash|}}
+      {{flash-message flash=flash}}
+  {{/each}}
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="todolist not-done">
+             <h1>Todo List</h1>
+                {{#if hasTitle}}
+                    <p class="text text-info">Press enter to save</p>
+                {{/if}}
+             	{{input type="text" value=newTitle class="form-control add-todo" placeholder="Add todo" insert-newline='saveTask'}}
+                <button id="checkAll" class="btn btn-success pull-right" {{action 'markAllDone'}}>Mark all as done</button>
+                <div class='clearfix'></div>
+                <hr>
+                <ul id="sortable" class="list-unstyled">
+                {{#each tasks as |task|}}
+                    <li class="ui-state-default">
+                        {{single-task task=task destroyTask=(action 'destroyTask')}}
+                    </li>
+
+                    {{!-- button has been disabled but can be enable based on user preferences. See <templates>
+                    <single-task></single-task> line 8  --}}
+                    
+			    {{/each}}
+                </ul>
+                <div class="todo-footer">
+                    <strong><span class="count-todos"></span></strong> ({{incomplete.length}}) Tasks left 
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
