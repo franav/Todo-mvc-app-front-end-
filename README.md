@@ -53,3 +53,6 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+
+## Preview
+![screen shot 2018-09-16 at 2 34 44 pm](https://user-images.githubusercontent.com/25443508/45597170-3941a000-b9c8-11e8-8f9c-6fe3011dbe8a.png)
